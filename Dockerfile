@@ -40,7 +40,7 @@ WORKDIR /app/coolify-test
 
 
 COPY --from=BUILD_IMAGE /app/coolify-test/dist/ /app/coolify-test/dist/
-EXPOSE 8080
+EXPOSE 3000
 
 # to run npm commands as: npm run preview
 # we need package.json
@@ -50,7 +50,7 @@ COPY vite.config.js .
 # we also need typescript as this project is based on typescript.
 RUN npm install typescript
 
-EXPOSE 8080
+EXPOSE 3000
 CMD ["npm", "run", "preview"]
 
 
